@@ -1,0 +1,22 @@
+.logout-button {
+    width: 10%;
+    height: 35px;
+    border-radius: 50px;
+    border: none;
+    background-color: #00798C;
+    color: #FFF;
+    font-size: 15px;
+    margin: 1% 0% 0% 80%;
+}
+
+.home-h3 {
+    font-size: 30px;
+    margin: -2% 0% 0% 45%;
+}
+
+.home-p {
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+    margin-left: 24%;
+}

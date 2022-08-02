@@ -1,6 +1,31 @@
-<h3>Log In</h3>
-<input type='text' #un><br/><br/>
-<input type='password' #p><br/><br/>
-<button (click)="check(un.value, p.value)">Login</button>
+<div class = 'container'>
+    <h3 class = 'login-h3'>Log In</h3>
+        <input 
+            type = 'text' 
+            placeholder = 'Enter your Username' 
+            #un>
+        
+        <i 
+            class = 'fa fa-user' 
+            aria-hidden = 'true'></i>
+            <br/><br/>
 
-{{msg}}
+ 
+        <input 
+            type = 'password' 
+            placeholder = 'Enter your Password' 
+            #p>
+        
+        <i 
+            class = 'fa fa-lock' 
+            aria-hidden = 'true'></i>
+            <br/><br/>
+
+        <button 
+            class = 'login-button' 
+            (click) = 'check(un.value, p.value)'>Login</button><br/><br/>
+
+<span class = 'error-msg'>{{msg}}</span>
+</div>
+
+

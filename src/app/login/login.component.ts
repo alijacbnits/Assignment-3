@@ -20,10 +20,10 @@ export class LoginComponent implements OnInit {
   check(uname:string, pwd:string) {
     var output = this.service.checkCredentials(uname, pwd);
     if(output == true) {
-      this.routes.navigate(['/home']);
+      this.routes.navigate(['/home']);    
     }
     else {
-      this.msg = 'Invalid'
+      this.msg = 'You have entered invalid credentials'   //showing error message for wrong credentials
     }
   }
 
