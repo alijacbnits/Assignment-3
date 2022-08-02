@@ -1,1 +1,6 @@
-<p>login works!</p>
+<h3>Log In</h3>
+<input type='text' #un><br/><br/>
+<input type='password' #p><br/><br/>
+<button (click)="check(un.value, p.value)">Login</button>
+
+{{msg}}
