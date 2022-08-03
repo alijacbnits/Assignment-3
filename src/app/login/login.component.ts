@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   check(uname:string, pwd:string) {
     var output = this.service.checkCredentials(uname, pwd);
-    if(output == true) {
+    if(output === true) {
       this.routes.navigate(['/home']);    
     }
     else {
