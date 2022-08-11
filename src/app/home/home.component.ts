@@ -52,12 +52,6 @@ export class HomeComponent implements OnInit {
     return this.userForm.get('contactNo')
    }
 
-  //  removeItem(data: any) {
-  //     this.listData.forEach((value:any, index:any) => {
-  //       if(value == data)
-  //       this.listData.splice(index, 1);
-  //     });
-  //  }
    removeItem(data: any) {
      this.listData = this.listData.filter((value: any, index: number)=>{
       if(value == data){
