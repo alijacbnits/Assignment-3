@@ -20,3 +20,63 @@
     text-align: center;
     margin-left: 24%;
 }
+
+.form-container {
+    background-color: rgb(189, 230, 247);
+    width: 30%;
+    padding: 4%;
+    margin-left: 5%;
+}
+
+input {
+    border-radius: 8px;
+    width: 80%;
+    height: 30px;
+}
+
+.error-msg {
+    color: red;
+}
+
+.add-button {
+    border-radius: 8px;
+    width: 20%;
+    height: 30px;
+    border-color: green;
+    background-color: green;
+    color: #FFF;
+    margin-left: 27%;
+}
+
+.reset-button {
+    border-radius: 8px;
+    width: 20%;
+    height: 30px;
+    border-color: rgb(219, 45, 80);
+    background-color: rgb(219, 45, 80);
+    color: #FFF;
+    margin-left: 5%;
+}
+
+  td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2;}
+  
+  tr:hover {background-color: #ddd;}
+  
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #075a3c;
+    color: white;
+  }
+
+  table {
+    width: 40%;
+    margin-left: 50%;
+    margin-top: -27%;
+  }

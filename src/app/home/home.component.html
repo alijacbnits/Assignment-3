@@ -2,3 +2,88 @@
 
 <h3 class = 'home-h3'>Homepage</h3>
 <p class = 'home-p'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+<div class = 'form-container'>
+    <form [formGroup] = 'userForm'>
+        <div>
+            <div>
+                <label><b>Name: </b></label>
+                <input 
+                    type = 'text'
+                    formControlName = 'name'
+                    placeholder = 'Please Enter your Name'
+                    required><br/>
+                    <span class = 'error-msg' *ngIf="name?.invalid && (name?.dirty || name?.touched)">*Name is Required</span><br/>
+                    <span class = 'error-msg' *ngIf="name?.errors?.['minlength']">*Name is too short</span>
+            </div><br/>
+        <div>
+                <label><b>Email: </b></label>
+                <input 
+                    type = 'text'
+                    formControlName = 'email'
+                    placeholder = 'Please Enter your Email'
+                    required><br/>
+                    <span class = 'error-msg' *ngIf="email?.invalid && (email?.dirty || email?.touched)">*Email is Required</span><br/>
+                    <span class = 'error-msg' *ngIf="email?.errors?.['pattern']">*Email is not valid</span>
+            </div><br/>
+            <div>
+                <label><b>Address: </b></label>
+                <input 
+                    type = 'text'
+                    formControlName = 'address'
+                    placeholder = 'Please Enter your Address'
+                    required><br/>
+                    <span class = 'error-msg' *ngIf="address?.invalid && (address?.dirty || address?.touched)">*Address is Required</span>
+            </div><br/>
+            <div>
+                <label><b>Phone: </b></label>
+                <input 
+                    type = 'number'
+                    formControlName = 'contactNo'
+                    placeholder = 'Please Enter your Contact No.'
+                    required><br/>
+                    <span class = 'error-msg' *ngIf = "contactNo?.invalid && (contactNo?.dirty || contactNo?.touched)">*Phone Number is Required</span><br/>
+                    <span class = 'error-msg' *ngIf = "contactNo?.hasError('pattern')">*Phone Number should be 10 digit</span>
+            </div>
+
+            <div>
+                <button 
+                    type = 'button' 
+                    [disabled] = "userForm.invalid" 
+                    (click) = 'addItem()'
+                    class = 'add-button'>Add</button>
+                <button 
+                    type = 'button' 
+                    (click) = 'resetItem()'
+                    class = 'reset-button'>Reset</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div>
+    <table border = '1'>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Contact No.</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let item of listData'>
+                <td>{{ item.name }}</td>
+                <td>{{ item.email }}</td>
+                <td>{{ item.address }}</td>
+                <td>{{ item.contactNo }}</td>
+                <td><button 
+                        type = 'button' 
+                        (click) = 'removeItem(item)'>Remove</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
